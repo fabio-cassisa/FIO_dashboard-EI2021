@@ -1,0 +1,10 @@
+{
+    "name": "basic-socket",
+    "version": "0.0.1",
+    "description": "Communication between Arduino and HTML/JavaScript",
+    "dependencies": {
+        "mime-types": "^2.1.34",
+        "serialport": "^9.0.1",
+        "socket.io": "^2.0.4"
+    }
+}

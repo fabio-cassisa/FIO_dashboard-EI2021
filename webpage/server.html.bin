@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+    <title>Node Server backend</title>
+</head>
+<body>
+    <div id="temp"></div>
+    <div id="humi"></div>
+    <div id="hormo"></div>
+    <script>
+        var socket = io();
+        socket.on('data', function(data) {
+          console.log(data);
+          dataArr = data.split(',');
+          document.getElementById("temp").innerHTML = dataArr[0];
+          document.getElementById("humi").innerHTML = dataArr[1];
+          document.getElementById("hormo").innerHTML = dataArr[2];
+        });
+    </script>
+</body>
+</html>
